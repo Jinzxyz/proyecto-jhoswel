@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creamos interfaces modernas y totalmente adaptadas. Diseño UI/UX, desarrollo web y SEO profesional.">
+    <title>Mi Proyecto - Diseño que inspira tu futuro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+      html { scroll-behavior: smooth; } 
+      body {
+        opacity: 1;
+        transition: opacity 0.6s ease-in-out;
+      }
+      body.fade-out {
+        opacity: 0;
+      }
+    </style>
+</head>
+
+<script>
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    
+    if (link && link.href && link.href.includes(window.location.origin) && !link.href.endsWith('#')) {
+      e.preventDefault();
+      
+      document.body.classList.add('fade-out');
+      
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 600);
+    }
+  });
+</script>
+
+<body class="page-inicio">
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Logo Mi Proyecto">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>        
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>    
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">  
+            <div class="hero-content">
+                <h1>Diseño que inspira tu futuro</h1>
+                <p>Creamos interfaces modernas, intuitivas y totalmente adaptadas a tus objetivos.</p>
+                <a href="servicios.html" class="btn-primary">Adquiere tu servicio ahora</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="card">
+                <h3>Diseño UI/UX</h3>
+                <p>Interfaces pensadas desde la perspectiva del usuario final.</p>
+            </div>
+            <div class="card">
+                <h3>Desarrollo</h3>
+                <p>Código limpio, rápido y preparado para crecer con tu proyecto.</p>
+            </div>
+            <div class="card">
+                <h3>SEO & Posicionamiento</h3>
+                <p>Estrategias efectivas para aparecer en los primeros lugares.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Entity's Technology</h3>
+                <p>Innovando en el mundo digital para crear experiencias que inspiran y convierten.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces rápidos</h4>
+                <ul class="quick-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Entity's Technology - Diseñando tu imaginacion</p>
+        </div>
+    </footer>
+
+</body>
+</html>
